@@ -12,10 +12,8 @@
     }
 
     $sql = "
-            DELETE
+            SELECT pagamenti.id, pagamenti.status, pagamenti.price > 600
             FROM `pagamenti`
-            WHERE id = 6
-             AND status = "accepted"
 
            ";
 
@@ -25,16 +23,12 @@
       echo "<ul>";
       while($row = $result->fetch_assoc()) {
             echo "<li>";
-             // echo "id: " . $row["id"] . " " . '<br>';
-             // echo "staus: " . $row["status"] . " " . '<br>';
-             // echo "price: " . $row["price"] . " " . '<br>';
-             // echo "prenotazione id: " . $row["prenotazione_id"] . " " . '<br>';
-             // echo "pagante id: " . $row["pagante_id"] . " " . '<br>';
-             // echo "creato il: " . $row["created_at"] . " " . '<br>';
-             // echo "caricato il: " . $row["updated_at"] . " " . '<br>';
+             echo "id: " . $row["id"] . " " . '<br>';
+             echo "stato: " . $row["status"] . " " . '<br>';
+             echo "prezzo: " . $row["price"] . " " . '<br>';
             echo "</li>";
          }
-
+      echo "</ul>";
 
      } elseif ($result) {
          echo "0 results";

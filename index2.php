@@ -13,7 +13,7 @@
     }
 
     $sql = "
-            DELETE 
+            DELETE
             FROM `pagamenti`
             WHERE id = 8
 
@@ -25,13 +25,7 @@
       echo "<ul>";
       while($row = $result->fetch_assoc()) {
             echo "<li>";
-             echo "id: " . $row["id"] . " " . '<br>';
-             echo "staus: " . $row["status"] . " " . '<br>';
-             echo "price: " . $row["price"] . " " . '<br>';
-             echo "prenotazione id: " . $row["prenotazione_id"] . " " . '<br>';
-             echo "pagante id: " . $row["pagante_id"] . " " . '<br>';
-             echo "creato il: " . $row["created_at"] . " " . '<br>';
-             echo "caricato il: " . $row["updated_at"] . " " . '<br>';
+             echo "pagamenti: " . $row["pagamenti"] . " " . '<br>';
             echo "</li>";
          }
 
