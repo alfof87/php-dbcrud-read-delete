@@ -25,7 +25,10 @@
             echo "<li>";
              echo "id: " . $row["id"] . " " . '<br>';
              echo "stato: " . $row["status"] . " " . '<br>';
-             echo "prezzo: " . $row["price"] . " " . '<br>';
+             if ("price" > 0 == true) {
+               echo "prezzo: " . $row["price"] . " " . '<br>';///////////////////////
+             }
+
             echo "</li>";
          }
       echo "</ul>";
