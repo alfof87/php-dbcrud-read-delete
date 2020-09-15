@@ -1,4 +1,6 @@
 <?php
+  //seleziona dalla tabella pagamenti le colonne id, status e price di tutti
+  //i pagamenti con price superiore a 600, stampa il risultato in una lista non ordinata
     $servername = "localhost";
     $username = "root";
     $password = "root";
@@ -12,7 +14,7 @@
     }
 
     $sql = "
-            SELECT pagamenti.id, pagamenti.status, pagamenti.price > 600
+            SELECT pagamenti.id, pagamenti.status, pagamenti.price > 600 AS price
             FROM `pagamenti`
 
            ";
@@ -20,18 +22,11 @@
     $result = $conn->query($sql);
 
     if ($result && $result->num_rows > 0) {
-      echo "<ul>";
-      while($row = $result->fetch_assoc()) {
-            echo "<li>";
-             echo "id: " . $row["id"] . " " . '<br>';
-             echo "stato: " . $row["status"] . " " . '<br>';
-             if ("price" > 0 == true) {
-               echo "prezzo: " . $row["price"] . " " . '<br>';///////////////////////
-             }
 
-            echo "</li>";
+      while($row = $result->fetch_assoc()) {
+        echo $row["id"] . "<br>" . $row["status"] . "<br>" . $row["price"];
          }
-      echo "</ul>";
+
 
      } elseif ($result) {
          echo "0 results";

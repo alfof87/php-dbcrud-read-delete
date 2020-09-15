@@ -1,5 +1,6 @@
 
 <?php
+  //elimina dalla tabella pagamenti la riga con id 8 (fatto in classe)
     $servername = "localhost";
     $username = "root";
     $password = "root";

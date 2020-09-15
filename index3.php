@@ -1,4 +1,5 @@
 <?php
+  //elimina dalla tabella pagamenti la riga con pagante_id = 6 e con status = rejected
     $servername = "localhost";
     $username = "root";
     $password = "root";
@@ -15,7 +16,7 @@
             DELETE
             FROM `pagamenti`
             WHERE id = 6
-             AND status = "accepted"
+             AND status = 'accepted'
 
            ";
 

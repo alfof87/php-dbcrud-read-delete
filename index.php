@@ -1,5 +1,6 @@
 
 <?php
+//seleziona tutto dalla tabella pagamenti e stampa il risultato in una lista ordinata (fatto in classe)
     $servername = "localhost";
     $username = "root";
     $password = "root";
